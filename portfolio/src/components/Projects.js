@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function Projects() {
-    const [fullName, setFullName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-
+function Project(props) {
+    
     return (
-        <figure class="first-sample sample"><a href="https://feast-of-friends.herokuapp.com/" target="_blank">
-            <img src="./assets/images/feast-of-friends.png"></a>
-            <figcaption>Team Project: Feast of Friends</figcaption>
+        <figure class="sample"><a href={`"${props.link}"`} target="_blank">
+            <img src={`"${props.img}"`} /></a>
+            <figcaption>{props.caption}</figcaption>
         </figure>
     );
 }
 
-export default Projects;
+export default Project;
