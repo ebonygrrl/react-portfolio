@@ -1,12 +1,18 @@
 import React from 'react';
 
-function Project(props) {
+function Project(props) { 
     
     return (
-        <figure class="sample"><a href={`"${props.link}"`} target="_blank">
-            <img src={`"${props.img}"`} /></a>
-            <figcaption>{props.caption}</figcaption>
-        </figure>
+        <>
+        {props.project.map((item, index) => {
+            return (
+            <figure class="sample" key={index}><a href={`"${item.link}"`} target="_blank" rel="noreferrer">
+                <img src={`"${item.img}"`} alt={`"${item.caption}"`}/></a>
+                <figcaption>{item.caption}</figcaption>
+            </figure>
+            );
+        })}
+        </>
     );
 }
 
