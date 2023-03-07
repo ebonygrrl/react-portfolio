@@ -6,8 +6,8 @@ function Project(props) {
         <>
         {props.project.map((item, index) => {
             return (
-            <figure class="sample" key={index}><a href={`"${item.link}"`} target="_blank" rel="noreferrer">
-                <img src={`"${item.img}"`} alt={`"${item.caption}"`}/></a>
+            <figure class="sample" key={index}><a href={item.link} target="_blank" rel="noreferrer">
+                <img src={item.img} alt={item.caption}/></a>
                 <figcaption>{item.caption}</figcaption>
             </figure>
             );

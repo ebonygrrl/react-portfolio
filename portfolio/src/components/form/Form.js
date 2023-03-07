@@ -21,20 +21,20 @@ function Form() {
       <form className="form" action="mailto:email@email.com">
         <input
           value={fullName}
-          name="firstName"
+          name="fullName"
           type="text"
           placeholder="Name"
           required
         />
         <input
           value={email}
-          name="lastName"
+          name="email"
           type="text"
           placeholder="Email"
           required
         />
         <textarea
-          value={email}
+          value={message}
           name="message"
           required
         ></textarea>

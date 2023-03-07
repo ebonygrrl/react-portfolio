@@ -36,6 +36,7 @@ body {
     flex-direction: column;
     font-family: var(--robotoBody);
     height: 100vh;
+    min-width: 375px;
 }
 
 footer {
@@ -73,6 +74,17 @@ h1 span {
 h2 {
     color: var(--bistreBrn);
     font-size: var(--fontxLarge);
+}
+
+input, textarea {
+    display: block;
+    margin-bottom: 10px !important;
+    width: 360px;
+}
+
+main {
+    margin: 0 auto;
+    width: 1000px;
 }
 
 main a {    
@@ -261,6 +273,11 @@ nav {
 }
 
 @media screen and (min-width: 376px) and (max-width: 1119px) {
+    
+    main {
+        margin: 0 auto;
+        width: 90%;
+    }
       
     .logo {
         max-width: 300px;
@@ -292,29 +309,7 @@ nav {
     }
 
     .section-content {
-        border-left: 3px solid var(--bistreBrn);
-        display: flex;
-        flex: 1 1 80%;
         padding: 0 30px;
-    }
-
-    .section-title {
-        flex: 1 1 0;
-        max-width: 150px;
-        min-width: 150px;
-    }
-
-    .section-title h2 {
-        flex-wrap: wrap;
-        margin: 0;
-        padding-right:20px;
-        text-align: right;
-    }
-
-    .sec-wrap {
-        display: flex;
-        flex: 1 0 100%;
-        flex-wrap: wrap;
     }
 
     .subtitle {

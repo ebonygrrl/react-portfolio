@@ -1,20 +1,24 @@
 import React from 'react';
 import Project from '../Projects';
+import fof from '../images/feast-of-friends.png';
+import aa from '../images/home-abigails-apothecary.jpg';
+import say from '../images/saybrook-university-50th-anniversary.jpg';
+
     
 const project = [  
     {
         link: 'https://feast-of-friends.herokuapp.com/',
-        img: '../images/feast-of-friends.png',
+        img: fof,
         caption: 'Team Project: Feast of Friends'
     },
     {
         link: 'https://abigailsapothecary.com/',
-        img: '../images/home-abigails-apothecary.jpg',
+        img: aa,
         caption: 'Abigail\'s Apothecary'
     },
     {
         link: 'https://www.saybrook.edu/unbound/timeline/',
-        img: '../images/saybrook-university-50th-anniversary.jpg',
+        img: say,
         caption: 'Saybrook University Timeline'
     }
 ];
