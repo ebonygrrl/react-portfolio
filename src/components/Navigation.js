@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Nav({ currentPage, handlePageChange }) {
+function Nav({ currentPage, handlePageChange }) {
   const navStyle = { display: 'flex', listStyle: 'none', margin: '0', padding: '0' };
 
   return (
@@ -8,8 +8,8 @@ export default function Nav({ currentPage, handlePageChange }) {
         <ul style={navStyle}>
             <li>
               <a href="#aboutme"
-                 onClick={() => handlePageChange('Home')}
-                 className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}>About Me</a>
+                 onClick={() => handlePageChange('About')}
+                 className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}>About Me</a>
             </li>
             <li>
               <a href="#work"
@@ -30,3 +30,5 @@ export default function Nav({ currentPage, handlePageChange }) {
     </nav>
   );
 }
+
+export default Nav;
