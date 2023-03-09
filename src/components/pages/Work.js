@@ -1,8 +1,8 @@
 import React from 'react';
 import Project from '../Projects';
-import fof from '../images/feast-of-friends.png';
-import aa from '../images/home-abigails-apothecary.jpg';
-import say from '../images/saybrook-university-50th-anniversary.jpg';
+import fof from '../../images/feast-of-friends.png';
+import aa from '../../images/home-abigails-apothecary.jpg';
+import say from '../../images/saybrook-university-50th-anniversary.jpg';
 
     
 const project = [  

@@ -154,7 +154,7 @@ nav {
 }
 
 .hero {
-    background: url("../images/chicago-sunset.jpg") center no-repeat;
+    background: url('../images/chicago-sunset.jpg') center no-repeat;
     background-size: cover;
     background-blend-mode: color-burn;
     min-height: 350px;
