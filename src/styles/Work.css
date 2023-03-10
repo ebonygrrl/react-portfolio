@@ -1,16 +1,5 @@
-.first-sample {
-    flex: 1 0 100%;
-    margin: 0 0 30px;
-    width: 100%;
-}
-
-.first-sample.sample img {
-    width: 100%;
-    height: auto;
-}
-
 .sample {
-    border: 8px solid var(--persianPlum);
+    border: 8px solid var(--paleDogwood);
     flex: 100%;
     margin: 0;
     position: relative;
@@ -32,8 +21,8 @@
 }
 
 .sample figcaption {
-    background-color: var(--persianPlum);
-    color: var(--bananaMania);
+    background-color: var(--paleDogwood);
+    color: var(--oxfordBlue);
     font-weight: bold;
     padding: 15px;
     position: absolute;
@@ -42,7 +31,7 @@
     text-transform: uppercase;
 }
 
-.section-content.work {
+.work {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;

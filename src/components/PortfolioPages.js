@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Nav from './Navigation';
+import Footer from './Footer';
 import About from './pages/About';
 import Work from './pages/Work';
 import Contact from './pages/Contact';
@@ -27,24 +28,17 @@ export default function PortfolioPages() {
 
   return (
     <>
-      <header>
-        <section class="header-wrap">
-          <div class="fb header-container">
-            <div class="logo sec-wrap">
-              <h1>Tori Booker<span>Professional Portfolio</span></h1>
-            </div>
+      <header class="header-wrap">
+            <div class="logo">
+              <h1>Tori Booker</h1>
+              <span>Professional Portfolio</span>
           </div>
           <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
-        </section>
-        {/* <section class="hero">
-          <div class="subtitle">
-            <p>"This is what I do!"</p>
-          </div>
-        </section> */}
       </header>
       <main>
         {renderPage()}
       </main>
+      <Footer />
     </>
   );
 }

@@ -4,9 +4,9 @@ import '../../styles/Resume.css';
 export default function Resume() {
   return (
     <>
-      <section id="resume" class="sec-wrap">
+      <section id="resume">
 
-        <header class="section-title">
+        <header>
           <h2>Resume</h2>
         </header>
 

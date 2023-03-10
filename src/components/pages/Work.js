@@ -28,8 +28,8 @@ function Work() {
 
     return (
 
-        <section id="work" class="sec-wrap">
-            <header class="section-title">
+        <section id="work">
+            <header>
                 <h2>Work</h2>
             </header>
             <article class="section-content work">
