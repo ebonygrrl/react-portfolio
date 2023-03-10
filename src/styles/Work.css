@@ -1,0 +1,49 @@
+.first-sample {
+    flex: 1 0 100%;
+    margin: 0 0 30px;
+    width: 100%;
+}
+
+.first-sample.sample img {
+    width: 100%;
+    height: auto;
+}
+
+.sample {
+    border: 8px solid var(--persianPlum);
+    flex: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.sample:not(:first-child) {
+    flex: 47%;
+}
+
+.sample a, .sample a:hover {
+    border: none;
+    margin: 0;
+}
+
+.sample img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.sample figcaption {
+    background-color: var(--persianPlum);
+    color: var(--bananaMania);
+    font-weight: bold;
+    padding: 15px;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    text-transform: uppercase;
+}
+
+.section-content.work {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}

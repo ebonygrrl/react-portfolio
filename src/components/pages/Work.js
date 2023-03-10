@@ -1,5 +1,6 @@
 import React from 'react';
 import Project from '../Projects';
+import '../../styles/Work.css';
 import fof from '../../images/feast-of-friends.png';
 import aa from '../../images/home-abigails-apothecary.jpg';
 import say from '../../images/saybrook-university-50th-anniversary.jpg';
