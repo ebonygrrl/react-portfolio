@@ -10,7 +10,7 @@ function Nav({ currentPage, handlePageChange }) {
             </li>
             <li className={currentPage === 'Work' ? 'active' : ''}>
               <a href="#work"
-                 onClick={() => handlePageChange('Work')}>Work</a>
+                 onClick={() => handlePageChange('Work')}>Portfolio</a>
             </li>
             <li className={currentPage === 'Contact' ? 'active' : ''}>
               <a href="#contact"

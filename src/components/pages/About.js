@@ -13,8 +13,15 @@ export default function About() {
           <img src={me} alt="Tori Booker" />
         </div>
         <div class="bio flx">
-          <p>Aenean tristique ex sapien, non pharetra ipsum tincidunt non. Nulla bibendum ligula in sem dictum, id porttitor velit mattis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse fermentum enim et risus rutrum, id fermentum arcu ornare. Vivamus imperdiet ex et fermentum mollis. Mauris in quam vel erat mollis tincidunt et vel magna.</p>
-          <p>Suspendisse nec urna enim. Duis ut eleifend neque. Vestibulum non nunc facilisis, tempus enim eu, interdum velit. Integer euismod neque ac ligula tincidunt, id interdum urna faucibus. Fusce luctus convallis tempus. Maecenas et dolor vehicula, sollicitudin tellus vel, volutpat erat. Vivamus efficitur, risus vitae sagittis vestibulum, nulla nisi suscipit turpis, eu ultricies lectus odio placerat eros. Mauris luctus lectus at porta sagittis.</p>
+          <p>Hello! My name is Tori Booker. I am a self-motivated individual with a record of success in troubleshooting and problem resolution. 
+            I am committed to life-long learning of skills and knowledge with a variety of experiences in education, information technology, business, eCommerce and retail, including management and supervisory experience. 
+            I have an extensive experience with PC computer systems—qualified in inter-office computer hardware and software troubleshooting and staff training.</p>
+          <p>Honestly, I feel like I've had a variety positions which contributed to the hard worker and team player I am today. In a snapshot, I've 
+            loaded and unloaded trucks for FedEx and UPS. I was a part-time supervisor at UPS as well. I've stocked shelves in a discount store, became a desktop publisher
+            at OfficeMax, and fixed computers at Best Buy's Geek Squad.</p>
+          <p>But, before all of those positions, I was just a teenager so blown away by the "world wide web" that I decided to teach myself HTML at Southern Illinois University in Carbondale.
+            I loved coding so much that I continue to pursue the technology field and even took a course on C# at a community college and graduated from ITT with a degree in Multimedia.</p>
+          <p>I look forward to what to the future holds and I hope you enjoy my work.</p>
         </div>
       </article>
     </>

@@ -1,3 +1,9 @@
+.work {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
 .sample {
     border: 8px solid var(--paleDogwood);
     flex: 100%;
@@ -9,7 +15,7 @@
     flex: 47%;
 }
 
-.sample a, .sample a:hover {
+.sample a {
     border: none;
     margin: 0;
 }
@@ -20,19 +26,25 @@
     max-height: 100%;
 }
 
-.sample figcaption {
+.project-caption {
     background-color: var(--paleDogwood);
     color: var(--oxfordBlue);
-    font-weight: bold;
     padding: 15px;
     position: absolute;
     bottom: 30px;
     left: 0;
+}
+
+.project-caption .title {
+    display: block;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
-.work {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+.repo {
+    display: block;
+}
+
+.tech {
+    font-size: 0.75em;
 }

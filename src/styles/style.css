@@ -100,14 +100,15 @@ main {
     min-height: calc(100vh - 285px);
 }
 
-main a {    
-    border-bottom: 2px solid var(--paleDogwood);
-    padding-bottom: 3px; 
+main a {
+    color: var(--oxfordBlue);
+    text-decoration: underline;
 }
 
 main a:hover {
-    border-bottom: 2px solid var(--paleDogwood);
     color: var(--paleDogwood);
+    background-color: var(--oxfordBlue);
+    text-decoration: none;
 }
 
 nav {
