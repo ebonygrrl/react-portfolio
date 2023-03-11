@@ -1,6 +1,7 @@
 import React from 'react';
 import Project from '../Projects';
 import fof from '../../images/feast-of-friends.png';
+import react from '../../images/react-portfolio.png';
 import code from '../../images/code-quiz.png';
 import hands from '../../images/paper-hands.png';
 import blog from '../../images/tech-blog.png';
@@ -22,6 +23,13 @@ const project = [
         img: fof,
         caption: 'Team Project: Feast of Friends',
         tech: 'NodeJS, ExpressJS, MySQL, Sequelize, Handlebars'
+    },    
+    {
+        link: 'https://feast-of-friends.herokuapp.com/',
+        repo: 'https://github.com/ebonygrrl/20-react-portfolio',
+        img: react,
+        caption: 'React Portfolio',
+        tech: 'NodeJS, React'
     },
     {
         link: 'https://ebonygrrl.github.io/02-professional-portfolio/',

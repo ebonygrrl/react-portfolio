@@ -2,7 +2,6 @@ import React from 'react';
 import Form from '../form/Form';
 import '../../styles/Contact.css';
 
-
 export default function Contact() {
     return (
         <>
@@ -11,7 +10,6 @@ export default function Contact() {
             </header>
             <article class="section-content">
                 <Form />
-
             </article>
         </>
     );

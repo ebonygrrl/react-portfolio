@@ -35,6 +35,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: var(--oxfordBlue);
+}
+
 html, body {
     height: 100%;
 }
@@ -65,6 +69,11 @@ button:hover {
 footer {
     background-color: var(--timberwolf);
     color: var(--oxfordBlue);
+}
+
+form {
+    margin: 0 auto;
+    width: 50%;
 }
 
 header {

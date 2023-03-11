@@ -63,6 +63,10 @@
     padding: var(--spacing-unit);
 }
 
+.footer-wrap a:hover {
+    text-decoration: underline;
+}
+
 @media screen and (min-width: 376px) and (max-width: 1119px) {
       
     .logo {
