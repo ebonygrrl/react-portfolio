@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     margin-bottom: 45px;
-    padding: 10px 50px;
+    padding: 10px 50px 28px;
+    flex-wrap: wrap;
     background-color: var(--paleDogwood);
     box-shadow: 0 -8px 15px 5px #000000;
 }
@@ -19,6 +20,10 @@
     line-height: 0;
 }
 
+.logo a, .logo a:hover {
+    color: var(--oxfordBlue);
+}
+
 .menu {
     display: flex;
     list-style: none;
@@ -26,7 +31,7 @@
     padding: 0;
 }
 
-.nav-link a {
+.menu li a {
     color: var(--oxfordBlue);
 }
 
@@ -38,7 +43,6 @@
     flex: 1;
     font-family: var(--bebasHead);
     font-size: 1.5rem;
-    font-weight: 100;
     text-align: center;
     text-transform: uppercase;
 }
@@ -50,7 +54,7 @@
     transition: all 0.3s linear;
 }
 
-.menu li > .active {
+.menu li.active {
     border-bottom: 3px solid var(--oxfordBlue);
 }
 
@@ -62,9 +66,7 @@
 @media screen and (min-width: 376px) and (max-width: 1119px) {
       
     .logo {
-        max-width: 300px;
         min-width: 300px;
-        text-align: center;
     }
 
     .menu li {

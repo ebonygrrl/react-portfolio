@@ -29,11 +29,13 @@ export default function PortfolioPages() {
   return (
     <>
       <header class="header-wrap">
-            <div class="logo">
-              <h1>Tori Booker</h1>
-              <span>Professional Portfolio</span>
-          </div>
-          <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
+        <div class="logo">
+          <a href="/">
+            <h1>Tori Booker</h1>
+            <span>Professional Portfolio</span>
+          </a>
+        </div>
+        <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
       </header>
       <main>
         {renderPage()}

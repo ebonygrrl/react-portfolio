@@ -5,7 +5,7 @@ import '../../styles/Contact.css';
 
 export default function Contact() {
     return (
-        <section id="contact">
+        <>
             <header>
                 <h2>Contact Me</h2>
             </header>
@@ -13,6 +13,6 @@ export default function Contact() {
                 <Form />
 
             </article>
-        </section>
+        </>
     );
 }

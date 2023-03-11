@@ -43,7 +43,7 @@ body {
     color: var(--oxfordBlue);
     font-size: 16px;
     font-family: var(--robotoBody);
-    min-width: 375px;
+    min-width: 432px;
     min-height: 100vh;
     background-color: var(--linen);
 }
@@ -111,6 +111,7 @@ main a:hover {
 }
 
 nav {
+    padding: 25px 0 5px;
     flex: 50% 1;
 }
 
@@ -124,22 +125,6 @@ nav {
 }
 
 @media screen and (min-width: 1120px) {
-
-    main .sec-wrap {        
-        margin-bottom: 40px;
-    }
-    
-    .contact-info {
-        align-self: center;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .contact-info li {
-        display: inline-block;
-        margin-right: 25px;
-    }
 
     .section-content {
         padding: 0 30px;

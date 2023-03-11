@@ -1,14 +1,28 @@
-#aboutme article {
+.about {
     display: flex;
-}
-
-.bio {
-    margin-left: 30px;
+    flex-wrap: wrap;
 }
 
 .avatar {
+    margin-bottom: 30px;
+    flex: 0 0 33%;
+    text-align: center;
+}
+
+.avatar img {
     width: 200px;
     height: 200px;
     border: 8px solid var(--paleDogwood);
     border-radius: 50%;
 } 
+
+.bio {
+    flex: 0 0 66%;
+}
+
+@media screen  and (max-width: 768px) {
+      
+    .flx {
+        flex: 1 0 100% !important;
+    }
+}

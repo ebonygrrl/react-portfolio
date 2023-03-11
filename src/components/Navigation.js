@@ -4,25 +4,21 @@ function Nav({ currentPage, handlePageChange }) {
   return (
     <nav>
         <ul class="menu">
-            <li>
+            <li className={currentPage === 'About' ? 'active' : ''}>
               <a href="#aboutme"
-                 onClick={() => handlePageChange('About')}
-                 className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}>About Me</a>
+                 onClick={() => handlePageChange('About')}>About Me</a>
             </li>
-            <li>
+            <li className={currentPage === 'Work' ? 'active' : ''}>
               <a href="#work"
-                 onClick={() => handlePageChange('Work')}
-                 className={currentPage === 'Work' ? 'nav-link active' : 'nav-link'}>Work</a>
+                 onClick={() => handlePageChange('Work')}>Work</a>
             </li>
-            <li>
+            <li className={currentPage === 'Contact' ? 'active' : ''}>
               <a href="#contact"
-                 onClick={() => handlePageChange('Contact')}
-                 className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}>Contact</a>
+                 onClick={() => handlePageChange('Contact')}>Contact</a>
             </li>
-            <li>
+            <li className={currentPage === 'Resume' ? 'active' : ''}>
               <a href="#resume"
-                 onClick={() => handlePageChange('Resume')}
-                 className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}>Resume</a>
+                 onClick={() => handlePageChange('Resume')}>Resume</a>
             </li>
         </ul>
     </nav>

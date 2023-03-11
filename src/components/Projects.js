@@ -8,7 +8,11 @@ function Project(props) {
             return (
             <figure class="sample" key={index}><a href={item.link} target="_blank" rel="noreferrer">
                 <img src={item.img} alt={item.caption}/></a>
-                <figcaption>{item.caption}</figcaption>
+                <figcaption>
+                    {item.caption}
+                    {item?.repo}
+                    {item.tech}
+                </figcaption>
             </figure>
             );
         })}
