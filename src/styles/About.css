@@ -1,0 +1,30 @@
+.about {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.avatar {
+    margin-bottom: 30px;
+    flex: 0 0 33%;
+    text-align: center;
+}
+
+.avatar img {
+    width: 200px;
+    height: 200px;
+    background-color: var(--paleDogwood);
+    border: 8px solid var(--paleDogwood);
+    border-radius: 50%;
+    box-shadow: 3px 15px 30px -15px #000000;
+} 
+
+.bio {
+    flex: 0 0 66%;
+}
+
+@media screen and (max-width: 768px) {
+      
+    .flx {
+        flex: 1 0 100% !important;
+    }
+}

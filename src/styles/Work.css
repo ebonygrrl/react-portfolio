@@ -1,0 +1,51 @@
+.work {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.sample {
+    border: 8px solid var(--champagne);
+    flex: 100%;
+    margin: 0;
+    position: relative;
+    box-shadow: 0 15px 10px -15px #000000;
+}
+
+.sample:not(:first-child) {
+    flex: 47%;
+}
+
+.sample a {
+    border: none;
+    margin: 0;
+}
+
+.sample img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.project-caption {
+    background-color: var(--champagne);
+    color: var(--oxfordBlue);
+    padding: 15px;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+}
+
+.project-caption .title {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.repo {
+    display: block;
+}
+
+.tech {
+    font-size: 0.75em;
+}

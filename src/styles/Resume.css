@@ -1,0 +1,40 @@
+.resume section {
+    padding: 25px 30px 20px;
+    margin-bottom: 30px;
+    background-color: var(--champagne);
+    box-shadow: 0 15px 10px -15px #000000;
+}
+
+.company {
+    display: flex;
+    margin: 15px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company span {
+    flex: 50%;
+    white-space: nowrap;
+}
+
+.date {
+    display: block;
+    padding: 10px 0;
+    font-weight: bold;
+    text-align: right;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .company {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+}
+
+@media screen and (max-width: 845px) {
+
+    .date {
+        text-align: inherit;
+    }
+}
