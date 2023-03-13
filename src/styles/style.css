@@ -5,6 +5,7 @@
     --oxfordBlue: #001637;
     --timberwolf: #D6CCC2;
     --linen: #F5EBE0;
+    --champagne: #E3D5CA;
 
     /* fonts */
     --bebasHead: 'Bebas Neue', cursive;
@@ -41,13 +42,13 @@ a:hover {
 
 html, body {
     height: 100%;
+    min-width: 520px;
 }
 
 body {
     color: var(--oxfordBlue);
     font-size: 16px;
     font-family: var(--robotoBody);
-    min-width: 432px;
     min-height: 100vh;
     background-color: var(--linen);
 }
@@ -67,6 +68,7 @@ button:hover {
 }
 
 footer {
+    margin-top: 15px;
     background-color: var(--timberwolf);
     color: var(--oxfordBlue);
 }
@@ -86,10 +88,9 @@ h1, h2, h3 {
 
 h1 {
     color: var(--oxfordBlue);
-    display: inline-block;
     font-size: var(--fontHuge);
-    line-height: 1em;
-    margin: 0;
+    line-height: 0.9em;
+    margin-bottom: 0;
 }
 
 h2 {
@@ -105,8 +106,9 @@ input, textarea {
 
 main {
     margin: 0 auto 30px;
+    padding: 0 15px;
     width: 1000px;
-    min-height: calc(100vh - 285px);
+    min-height: calc(100vh - 302px);
 }
 
 main a {
@@ -127,10 +129,11 @@ nav {
 
 /* media queries */
 
-@media screen and (min-width: 376px) and (max-width: 1119px) {
-    
+@media screen and (max-width: 1000px) {
+
     main {
         width: 90%;
+        min-height: calc(100vh - 370px);
     }
 }
 
@@ -138,5 +141,12 @@ nav {
 
     .section-content {
         padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    form {
+        width: 100%;
     }
 }

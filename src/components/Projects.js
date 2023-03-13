@@ -8,12 +8,12 @@ function Project(props) {
             const repo = item.repo;
 
             return (
-            <figure class="sample" key={index}><a href={item.link} target="_blank" rel="noreferrer">
+            <figure className="sample" key={index}><a href={item.link} target="_blank" rel="noreferrer">
                 <img src={item.img} alt={item.caption}/></a>
-                <figcaption class="project-caption">
-                    <span class="title">{item.caption}</span>
-                    {repo ? ( <span class="repo"><a href={item.repo}>Github</a></span> ) : ('') }
-                    <span class="tech">Tech Stack: {item.tech}</span>
+                <figcaption className="project-caption">
+                    <span className="title">{item.caption}</span>
+                    {repo ? ( <span className="repo"><a href={item.repo}>Github</a></span> ) : ('') }
+                    <span className="tech">Tech Stack: {item.tech}</span>
                 </figcaption>
             </figure>
             );

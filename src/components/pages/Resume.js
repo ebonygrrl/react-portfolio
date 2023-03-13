@@ -8,22 +8,21 @@ export default function Resume() {
         <h2>Resume</h2>
       </header>
 
-      <article class="section-content">
+      <article className="section-content resume">
+
+        <h3>Professional Summary</h3>
 
         <section>
-          <h3>Professional Summary</h3>
-
           <p>Experienced email and web designer with an emphasis on optimizing email performance, responsive mobile design, and digital user experience</p>
-
         </section>
 
+        <h3>Career Summary</h3>
+
         <section>
-          <h3>Career Summary</h3>
-
-          <strong>Ebony Media Group</strong> &bull; <em>Content Marketing Manager</em>
-
-          <strong class="date">November 2021 - Present</strong>
-
+          <div className="company">
+            <span><strong>Ebony Media Group</strong> &bull; <em>Content Marketing Manager</em></span>
+            <span className="date">November 2021 - Present</span>
+          </div>
           <ul>
             <li>Oversee email marketing process - including research, content creation, and layout planning.</li>
             <li>Conceptualize email campaigns to increase engagement and meet sponsorship agreements.</li>
@@ -33,9 +32,10 @@ export default function Resume() {
         </section>
 
         <section>
-          <strong>TCS Education System</strong> &bull; <em>Creative Technologist</em>
-
-          <strong class="date">October 2017 - November 2021</strong>
+          <div className="company">
+            <span><strong>TCS Education System</strong> &bull; <em>Creative Technologist</em></span>
+            <span className="date">October 2017 - November 2021</span>
+          </div>
           <ul>
             <li>Served as subject matter expert for digital experiences for internal teams and external stakeholders to educate and provide thought leadership on interactive technologies.</li>
             <li>Managed the infrastructure, analytics, targeting, testing, and tooling requirements for websites and digital platforms.</li>
@@ -45,9 +45,10 @@ export default function Resume() {
         </section>
 
         <section>
-          <strong>Sears Holdings</strong> &bull; <em>Email Developer</em>
-
-          <strong class="date">August 2013 - June 2017</strong>
+          <div className="company">
+            <span><strong>Sears Holdings</strong> &bull; <em>Email Developer</em></span>
+            <span className="date">August 2013 - June 2017</span>
+          </div>
           <ul>
             <li>Responsible for quick and efficient, error-free coding mobile-responsive promotional, triggered, and transactional email campaigns for Sears, Kmart, Craftsman, and Shop Your Way.</li>
             <li>Utilized HTML nested table structure for emails, responsive CSS for mobile. </li>
@@ -56,9 +57,10 @@ export default function Resume() {
         </section>
 
         <section>
-          <strong>OpticsPlanet, Inc.</strong> &bull; <em>Web Designer</em>
-
-          <strong class="date">October 2009 - August 2013</strong>
+          <div className="company">
+            <span><strong>OpticsPlanet, Inc.</strong> &bull; <em>Web Designer</em></span>
+            <span className="date">October 2009 - August 2013</span>
+          </div>
           <ul>
             <li>Created websites using HTML, CSS, and customized WordPress plugins.</li>
             <li>Performed company blog migration from Blogger to Wordpress.</li>
@@ -78,12 +80,12 @@ export default function Resume() {
         <section>
           <h3>Programming</h3>
 
-          <p>Node JS &bull; React &bull; ExpressJS &bull; MongoDB &bull; MySQL &bull; HTML5 &bull; CSS3 &bull; JQuery &bull; Javascript</p>
+          <p>Node JS &bull; React &bull; ExpressJS &bull; MongoDB &bull; MySQL &bull; HTML5 &bull; CSS3 &bull; JQuery &bull; Javascript &bull; PHP(Wordpress)</p>
         </section>
 
         <section>
           <h3>Tools</h3>
-          <p>Adobe Photoshop CS6 &bull; Adobe Dreamweaver CS6 &bull; Microsoft Outlook &bull; Microsoft Excel</p>
+          <p>Visual Studio &bull; Adobe Photoshop CS6 &bull; Adobe Dreamweaver CS6 &bull; Microsoft Outlook &bull; Microsoft Excel</p>
         </section>
       </article>
     </>

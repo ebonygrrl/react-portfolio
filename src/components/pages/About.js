@@ -8,11 +8,11 @@ export default function About() {
       <header>
         <h2>About Me</h2>
       </header>
-      <article class="about section-content">
-        <div class="avatar flx">
+      <article className="about section-content">
+        <div className="avatar flx">
           <img src={me} alt="Tori Booker" />
         </div>
-        <div class="bio flx">
+        <div className="bio flx">
           <p>Hello! My name is Tori Booker. I am a self-motivated individual with a record of success in troubleshooting and problem resolution. 
             I am committed to life-long learning of skills and knowledge with a variety of experiences in education, information technology, business, eCommerce and retail, including management and supervisory experience. 
             I have an extensive experience with PC computer systems—qualified in inter-office computer hardware and software troubleshooting and staff training.</p>

@@ -118,7 +118,7 @@ function Work() {
             <header>
                 <h2>Work</h2>
             </header>
-            <article class="section-content work">
+            <article className="section-content work">
                 <Project project={project} />
             </article>
         </>

@@ -9,7 +9,7 @@ import '../styles/Header.css';
 
 export default function PortfolioPages() {
   //set init page
-  const [currentPage, setCurrentPage] = useState('About');
+  const [currentPage, setCurrentPage] = useState('Contact');
 
   const renderPage = () => {
     if (currentPage === 'About') {
@@ -28,14 +28,16 @@ export default function PortfolioPages() {
 
   return (
     <>
-      <header class="header-wrap">
-        <div class="logo">
-          <a href="/">
-            <h1>Tori Booker</h1>
-            <span>Professional Portfolio</span>
-          </a>
+      <header className="header-wrap">
+        <div className="header-container">
+          <div className="logo">
+            <a href="/">
+              <h1>Tori Booker</h1>
+              <span>Professional Portfolio</span>
+            </a>
+          </div>
+          <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
         </div>
-        <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
       </header>
       <main>
         {renderPage()}

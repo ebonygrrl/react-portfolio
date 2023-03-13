@@ -5,10 +5,11 @@
 }
 
 .sample {
-    border: 8px solid var(--paleDogwood);
+    border: 8px solid var(--champagne);
     flex: 100%;
     margin: 0;
     position: relative;
+    box-shadow: 0 15px 10px -15px #000000;
 }
 
 .sample:not(:first-child) {
@@ -27,7 +28,7 @@
 }
 
 .project-caption {
-    background-color: var(--paleDogwood);
+    background-color: var(--champagne);
     color: var(--oxfordBlue);
     padding: 15px;
     position: absolute;

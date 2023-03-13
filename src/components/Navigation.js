@@ -3,7 +3,7 @@ import React from 'react';
 function Nav({ currentPage, handlePageChange }) {
   return (
     <nav>
-        <ul class="menu">
+        <ul className="menu">
             <li className={currentPage === 'About' ? 'active' : ''}>
               <a href="#aboutme"
                  onClick={() => handlePageChange('About')}>About Me</a>
