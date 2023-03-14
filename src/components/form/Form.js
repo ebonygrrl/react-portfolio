@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import '../../styles/Contact.css';
-
-// import a helper function that will check if the email is valid
-import { validateEmail } from '../../utils/helpers';
+import { validateName, validateEmail } from '../../utils/helpers';
 
 function Contact() {
   // Here we set two state variables for firstName and lastName using `useState`
@@ -12,6 +10,7 @@ function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState({});
+  const [addClass, setClass] = useState({});
 
   // validate form entries
   const [validated, setValidated] = useState(false);
@@ -26,7 +25,6 @@ function Contact() {
     setEmail('');
     setMessage('');
 
-
     // validate form entries
     const form = e.currentTarget;
     if (form.checkValidity() === false) {
@@ -38,80 +36,97 @@ function Contact() {
   };
 
   const handleInputChange = (e) => {
-    const {name, value } = e.target;
+    const { name, value } = e.target;
 
-    if (name === 'fullName' && !fullName) {
-      setError({ ...error, fullName: 'Please fill in your full name.'});
-      setValidated(true);
+    if (name === 'email' && validateEmail(email)) {
+      setEmail(value);
+      setClass({ ...addClass, email: '' });
       return;
-    } else {
-      setFullName(value);
-      setValidated(false);
     }
 
-    if (name === 'email' && !validateEmail(email)) {
-      setError({ ...error, email: 'Please enter a valid email.' });
-      setValidated(true);
+    if (name === 'fullName' && validateName(fullName)) {
+      setFullName(value);
+      setClass({ ...addClass, fullName: '' });
       return;
-    } else {
-      setEmail(value);
-      setValidated(false);
+    }
+
+    if (name === 'message') {
+      setMessage(value);
+      setClass({ ...addClass, message: '' });
+      return;
+    }
+  };
+
+  const handleInputBlur = (e) => {
+
+    const { name } = e.target;
+
+    if (name === 'fullName' && !fullName) {
+      setError({ ...error, fullName: 'Please fill in your full name.' });
+      setClass({ ...addClass, fullName: 'show' });
+    }
+
+    if (name === 'email' && !email) {
+      setError({ ...error, email: 'Please enter a valid email.' });
+      setClass({ ...addClass, email: 'show' });
     }
 
     if (name === 'message' && message === '') {
-      setError({ ...error, message: 'Please leave a message.'});
-      setValidated(true);
-      return;
-    } else {
-      setMessage(value);
-      setValidated(false);
+      setError({ ...error, message: 'Please leave a message.' });
+      setClass({ ...addClass, message: 'show' });
     }
+  };
+
+  const handleReset = (e) => {    
+    setFullName('');
+    setEmail('');
+    setMessage('');
   };
 
   return (
     <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
       <Form.Group className="mb-3" controlId="formBasicName">
-        <Form.Control 
-          type="text" 
-          name="fullName" 
-          defaultValue={fullName} 
-          onChange={handleInputChange} 
-          onBlur={handleInputChange} 
-          placeholder="Full Name" 
-          required 
+        <Form.Control
+          type='text'
+          name="fullName"
+          defaultValue={fullName}
+          onChange={handleInputChange}
+          onBlur={handleInputBlur}
+          placeholder="Full Name"
+          required
         />
-        <Form.Control.Feedback type="invalid">{error.fullName}</Form.Control.Feedback>
+        <Form.Control.Feedback type="invalid" className={addClass.fullName}>{error.fullName}</Form.Control.Feedback>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Control 
-          type="email" 
-          name="email" 
-          defaultValue={email} 
-          onChange={handleInputChange} 
-          onBlur={handleInputChange} 
-          placeholder="Enter email" 
-          required 
+        <Form.Control
+          type="email"
+          name="email"
+          defaultValue={email}
+          onChange={handleInputChange}
+          onBlur={handleInputBlur}
+          placeholder="Enter email"
+          required
         />
-        <Form.Control.Feedback type="invalid">{error.email}</Form.Control.Feedback>
+        <Form.Control.Feedback type="invalid" className={addClass.email}>{error.email}</Form.Control.Feedback>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicTextarea">
-      <Form.Control 
-        as="textarea"
-        name="message"
-        rows={3} 
-        defaultValue={message} 
-        onChange={handleInputChange} 
-        onBlur={handleInputChange} 
-        placeholder="Leave a comment here." 
-        required 
-      />
-      <Form.Control.Feedback type="invalid">{error.message}</Form.Control.Feedback>
+        <Form.Control
+          as="textarea"
+          name="message"
+          rows={3}
+          defaultValue={message}
+          onChange={handleInputChange}
+          onBlur={handleInputBlur}
+          placeholder="Leave a comment here."
+          required
+        />
+        <Form.Control.Feedback type="invalid" className={addClass.message}>{error.message}</Form.Control.Feedback>
       </Form.Group>
 
       <div className="text-center mt-3">
-        <Button className='button' type="submit">Submit form</Button>
+        <Button className="formBtn" type="submit">Submit</Button> <Button className="formBtn" type="reset" onClick={handleReset}>Reset</Button>
       </div>
     </Form>
   );
