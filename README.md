@@ -24,7 +24,7 @@ This is my professional online portfolio built using React technology. This sing
 <a name="usage"></a> 
 ## Usage
 
-* Visit the live application [here](). 
+* Visit the live application [here](http://ebonygrrl.github.io/react-portfolio). 
 * Simply click on the navigation title that you would like to view.
 
 <a name="demo"></a> 
