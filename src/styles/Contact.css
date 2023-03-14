@@ -11,7 +11,7 @@ button.formBtn {
     padding: 10px 50px;
 }
 
-button.formBtn:hover, button.btn:first-child:active, button.btn:focus-visible {
+button.formBtn:hover, button.btn:first-child:active, button.btn:focus-visible, button:not(.btn-check)+.btn:active {
     background-color: var(--champagne);
     color: var(--oxfordBlue);
     border-color: transparent;

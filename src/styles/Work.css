@@ -49,3 +49,21 @@
 .tech {
     font-size: 0.75em;
 }
+
+.title a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 998px) {
+    .sample:not(:first-child) {
+        flex: 100%;
+    }
+
+    .project-caption {
+        background-color: var(--champagne);
+        color: var(--oxfordBlue);
+        padding: 15px;
+        position: relative;
+        bottom: 0;
+    }
+}

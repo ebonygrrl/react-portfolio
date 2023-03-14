@@ -1,15 +1,17 @@
 import React from 'react';
 import '../../styles/Resume.css';
+import PDFresume from '../../pdf/abooker-resume-2023.pdf';
 
 export default function Resume() {
   return (
     <>
-      <header>
+      <header className="resume">
         <h2>Resume</h2>
+        <span><a href={PDFresume} target="_blank">View downloadable version</a></span>
       </header>
 
       <article className="section-content resume">
-
+        
         <h3>Professional Summary</h3>
 
         <section>
@@ -84,7 +86,7 @@ export default function Resume() {
         </section>
 
         <section>
-          <h3>Tools</h3>
+          <h3>Software & Tools</h3>
           <p>Visual Studio &bull; Adobe Photoshop CS6 &bull; Adobe Dreamweaver CS6 &bull; Microsoft Outlook &bull; Microsoft Excel</p>
         </section>
       </article>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import '../../styles/Contact.css';
-import { validateName, validateEmail } from '../../utils/helpers';
+import { validateName, validateEmail, validateMessage } from '../../utils/helpers';
 
 function Contact() {
   // Here we set two state variables for firstName and lastName using `useState`
@@ -11,19 +11,10 @@ function Contact() {
   const [message, setMessage] = useState('');
   const [error, setError] = useState({});
   const [addClass, setClass] = useState({});
-
-  // validate form entries
-  const [validated, setValidated] = useState(false);
+  const [confirm, setConfirm] = useState('');
 
   const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
-
-    // Alert the user their first and last name, clear the inputs
-    alert(`Thank you, ${fullName}! Your message has been sent.`);
-    setFullName('');
-    setEmail('');
-    setMessage('');
 
     // validate form entries
     const form = e.currentTarget;
@@ -32,28 +23,39 @@ function Contact() {
       e.stopPropagation();
     }
 
-    setValidated(true);
+    if (fullName && email && message) {
+
+      // alert user their message has been sent, clear the inputs
+      setConfirm(`Thank you, ${fullName}! Your message has been sent.`);
+
+      setFullName('');
+      setEmail('');
+      setMessage('');
+    }
   };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
-    if (name === 'email' && validateEmail(email)) {
-      setEmail(value);
-      setClass({ ...addClass, email: '' });
-      return;
+    if (name === 'fullName') {
+      setFullName(value);
+      if (validateName(fullName)) {
+        setClass({ ...addClass, fullName: false });
+      }
     }
 
-    if (name === 'fullName' && validateName(fullName)) {
-      setFullName(value);
-      setClass({ ...addClass, fullName: '' });
-      return;
+    if (name === 'email') {
+      setEmail(value);
+      if (validateEmail(email)) {
+        setClass({ ...addClass, email: false });
+      }
     }
 
     if (name === 'message') {
       setMessage(value);
-      setClass({ ...addClass, message: '' });
-      return;
+      if (validateMessage(message)) {
+        setClass({ ...addClass, message: false });
+      }
     }
   };
 
@@ -63,72 +65,82 @@ function Contact() {
 
     if (name === 'fullName' && !fullName) {
       setError({ ...error, fullName: 'Please fill in your full name.' });
-      setClass({ ...addClass, fullName: 'show' });
+      setClass({ ...addClass, fullName: true });
     }
 
     if (name === 'email' && !email) {
       setError({ ...error, email: 'Please enter a valid email.' });
-      setClass({ ...addClass, email: 'show' });
+      setClass({ ...addClass, email: true });
     }
 
     if (name === 'message' && message === '') {
       setError({ ...error, message: 'Please leave a message.' });
-      setClass({ ...addClass, message: 'show' });
+      setClass({ ...addClass, message: true });
+    }
+
+    if (name === 'message' && message !== '' && !validateMessage(message)) {
+      setError({ ...error, message: 'You gotta give me more than that!' });
+      setClass({ ...addClass, message: true });
     }
   };
 
-  const handleReset = (e) => {    
+  const handleReset = (e) => {
     setFullName('');
     setEmail('');
     setMessage('');
+    setConfirm('');
   };
 
   return (
-    <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
-      <Form.Group className="mb-3" controlId="formBasicName">
-        <Form.Control
-          type='text'
-          name="fullName"
-          defaultValue={fullName}
-          onChange={handleInputChange}
-          onBlur={handleInputBlur}
-          placeholder="Full Name"
-          required
-        />
-        <Form.Control.Feedback type="invalid" className={addClass.fullName}>{error.fullName}</Form.Control.Feedback>
-      </Form.Group>
+    <>
+      <Form noValidate onSubmit={handleFormSubmit}>
+        <Form.Group className="mb-3" controlId="formBasicName">
+          <Form.Control
+            type='text'
+            name="fullName"
+            value={fullName}
+            onChange={handleInputChange}
+            onBlur={handleInputBlur}
+            placeholder="Full Name"
+            required
+          />
+          <Form.Control.Feedback type="invalid" className={addClass.fullName ? 'show' : 'hide'}>{error.fullName}</Form.Control.Feedback>
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Control
-          type="email"
-          name="email"
-          defaultValue={email}
-          onChange={handleInputChange}
-          onBlur={handleInputBlur}
-          placeholder="Enter email"
-          required
-        />
-        <Form.Control.Feedback type="invalid" className={addClass.email}>{error.email}</Form.Control.Feedback>
-      </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Control
+            type="email"
+            name="email"
+            value={email}
+            onChange={handleInputChange}
+            onBlur={handleInputBlur}
+            placeholder="Enter email"
+            required
+          />
+          <Form.Control.Feedback type="invalid" className={addClass.email ? 'show' : 'hide'}>{error.email}</Form.Control.Feedback>
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicTextarea">
-        <Form.Control
-          as="textarea"
-          name="message"
-          rows={3}
-          defaultValue={message}
-          onChange={handleInputChange}
-          onBlur={handleInputBlur}
-          placeholder="Leave a comment here."
-          required
-        />
-        <Form.Control.Feedback type="invalid" className={addClass.message}>{error.message}</Form.Control.Feedback>
-      </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicTextarea">
+          <Form.Control
+            as="textarea"
+            name="message"
+            rows={3}
+            value={message}
+            onChange={handleInputChange}
+            onBlur={handleInputBlur}
+            placeholder="Leave a comment here."
+            required
+          />
+          <Form.Control.Feedback type="invalid" className={addClass.message ? 'show' : 'hide'}>{error.message}</Form.Control.Feedback>
+        </Form.Group>
 
-      <div className="text-center mt-3">
-        <Button className="formBtn" type="submit">Submit</Button> <Button className="formBtn" type="reset" onClick={handleReset}>Reset</Button>
-      </div>
-    </Form>
+        <div className="text-center mt-3">
+          <Button className="formBtn" type="submit">Submit</Button> <Button className="formBtn" type="reset" onClick={handleReset}>Reset</Button>
+        </div>
+      </Form>
+
+      <div className="text-center mt-3">{confirm}</div>
+    </>
   );
 }
 
