@@ -1,0 +1,13 @@
+.button {
+    background-color: var(--oxfordBlue);
+    border-radius: 5px;
+    border: none;
+    color: var(--linen);
+    cursor: pointer;
+    padding: 10px 50px;
+}
+
+.button:hover {
+    background-color: var(--timberwolf);
+    color: var(--oxfordBlue);
+}
