@@ -10,7 +10,6 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    min-width: 520px;
     max-width: 1000px;
 }
 
@@ -76,10 +75,27 @@
         justify-content: center;
         flex-wrap: wrap;
         width: 90%;
+        max-width: 90%;
     }
       
     .logo {
         max-width: 300px;
         min-width: 300px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    html, body {
+        min-width: auto !important;
+    }
+      
+    .menu li {
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .menu li {
+        font-size: 1.2em !important;
     }
 }

@@ -1,3 +1,9 @@
+header.resume {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
 .resume section {
     padding: 25px 30px 20px;
     margin-bottom: 30px;
@@ -36,5 +42,16 @@
 
     .date {
         text-align: inherit;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .company span {
+        flex: none;
+        white-space: normal;
+    }
+
+    .company em {
+        display: block;
     }
 }
