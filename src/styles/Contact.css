@@ -1,0 +1,19 @@
+.invalid-feedback.show {
+    display: block;
+}
+
+button.formBtn {
+    background-color: var(--oxfordBlue);
+    border-radius: 5px;
+    border: none;
+    color: var(--linen);
+    cursor: pointer;
+    padding: 10px 50px;
+}
+
+button.formBtn:hover, button.btn:first-child:active, button.btn:focus-visible {
+    background-color: var(--champagne);
+    color: var(--oxfordBlue);
+    border-color: transparent;
+    box-shadow: none;
+}
