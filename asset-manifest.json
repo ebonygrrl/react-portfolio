@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.bbc47ac7.css",
+    "main.js": "/react-portfolio/static/js/main.00a09c89.js",
+    "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
+    "static/media/feast-of-friends.png": "/react-portfolio/static/media/feast-of-friends.2fbdfd08cd313439b60e.png",
+    "static/media/html-portfolio.png": "/react-portfolio/static/media/html-portfolio.4e1950f1ace2cfe5f510.png",
+    "static/media/me.png": "/react-portfolio/static/media/me.ebf820add0fa8ab1f74d.png",
+    "static/media/react-portfolio.png": "/react-portfolio/static/media/react-portfolio.207f91a7c9ffc6b389d4.png",
+    "static/media/weather-dashboard.png": "/react-portfolio/static/media/weather-dashboard.e1aa464f7f0260dfa21b.png",
+    "static/media/saybrook-university-50th-anniversary.jpg": "/react-portfolio/static/media/saybrook-university-50th-anniversary.fd6c72c400c5a16ebd85.jpg",
+    "static/media/home-chitown-cartage.jpg": "/react-portfolio/static/media/home-chitown-cartage.4f304428c3a5956173c9.jpg",
+    "static/media/home-chirock-nation.jpg": "/react-portfolio/static/media/home-chirock-nation.0b597b48fd058e395e8a.jpg",
+    "static/media/abooker-resume-2023.pdf": "/react-portfolio/static/media/abooker-resume-2023.3d7d597f5e0da64b3d33.pdf",
+    "static/media/home-awesome-ac.jpg": "/react-portfolio/static/media/home-awesome-ac.da5ff8c536052c2c56fb.jpg",
+    "static/media/paper-hands.png": "/react-portfolio/static/media/paper-hands.157ef7fee031c05c3cbf.png",
+    "static/media/work-day-scheduler.png": "/react-portfolio/static/media/work-day-scheduler.93e77d66618a92ce5e52.png",
+    "static/media/home-abigails-apothecary.jpg": "/react-portfolio/static/media/home-abigails-apothecary.8db8e14e46b47bbc91e1.jpg",
+    "static/media/code-quiz.png": "/react-portfolio/static/media/code-quiz.e5217be965da441d4d52.png",
+    "static/media/tech-blog.png": "/react-portfolio/static/media/tech-blog.04b76a811e3bab12bd29.png",
+    "index.html": "/react-portfolio/index.html",
+    "main.bbc47ac7.css.map": "/react-portfolio/static/css/main.bbc47ac7.css.map",
+    "main.00a09c89.js.map": "/react-portfolio/static/js/main.00a09c89.js.map",
+    "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bbc47ac7.css",
+    "static/js/main.00a09c89.js"
+  ]
+}
