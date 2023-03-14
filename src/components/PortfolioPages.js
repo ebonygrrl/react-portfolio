@@ -9,7 +9,7 @@ import '../styles/Header.css';
 
 export default function PortfolioPages() {
   //set init page
-  const [currentPage, setCurrentPage] = useState('Contact');
+  const [currentPage, setCurrentPage] = useState('About');
 
   const renderPage = () => {
     if (currentPage === 'About') {

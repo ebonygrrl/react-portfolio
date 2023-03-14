@@ -49,3 +49,7 @@
 .tech {
     font-size: 0.75em;
 }
+
+.title a {
+    text-decoration: none;
+}
