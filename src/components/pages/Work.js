@@ -13,6 +13,7 @@ import chitowncartage from '../../images/home-chitown-cartage.jpg';
 import chirock from '../../images/home-chirock-nation.jpg';
 import abigails from '../../images/home-abigails-apothecary.jpg';
 import say from '../../images/saybrook-university-50th-anniversary.jpg';
+import train from '../../images/meal-train.png';
 import '../../styles/Work.css';
 
 
@@ -30,6 +31,13 @@ const project = [
         img: react,
         caption: 'React Portfolio',
         tech: 'NodeJS, React'
+    },
+    {
+        link: 'https://meal-train-ab.herokuapp.com/',
+        repo: 'https://github.com/TrilogyHi5/meal-train',
+        img: train,
+        caption: 'Team Project: Meal Train',
+        tech: 'GraphQL, React, ExpressJS, MongoDB, Mongoose'
     },
     {
         link: 'https://ebonygrrl.github.io/02-professional-portfolio/',
